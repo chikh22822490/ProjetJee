@@ -6,12 +6,11 @@ import com.university.university.Entities.Etudiant;
 import com.university.university.Interfaces.EtudiantService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.validation.annotation.Validated;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,6 +33,12 @@ public class EtudiantController {
     @GetMapping(value="/FindEtId/{/id}")
     public Etudiant findEtudiant(@PathVariable(value = "id") String id){
         return etS.findEtudiantById(Long.parseLong(id));
+    }
+
+    @DeleteMapping(value="/FindEtId/{/id}")
+    public String deleteEtudiant(@PathVariable(value = "id") String id){
+        etS.removeEtudiant(Long.parseLong(id));
+        return "Etudiant supprime avec succes";
     }
 
     @PutMapping("/updateEt/{/id}")
