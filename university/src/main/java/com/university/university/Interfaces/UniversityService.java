@@ -8,7 +8,7 @@ public interface UniversityService {
     
     void saveUniversity(University un);
     void updateUniversity(University un);
-    List<University> listUniversitys();
+    List<University> listUniversity();
     void removeUniversity(long id);
     public University findUniversityById(long id);
 }

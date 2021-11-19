@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/etudiant")
 public class EtudiantController {
+    
     @Autowired
     EtudiantService etS;
 

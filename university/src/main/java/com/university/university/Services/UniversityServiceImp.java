@@ -25,7 +25,7 @@ public class UniversityServiceImp implements UniversityService{
     }
 
     @Override
-    public List<University> listUniversitys() {
+    public List<University> listUniversity() {
         return unR.findAll();
     }
 
