@@ -22,5 +22,21 @@ public class University {
     List<Departement> departements;
 
     public University(){}
+
+    public String getAdresseU() {
+        return adresseU;
+    }
+
+    public void setAdresseU(String adresseU) {
+        this.adresseU = adresseU;
+    }
+
+    public String getNomU() {
+        return nomU;
+    }
+
+    public void setNomU(String nomU) {
+        this.nomU = nomU;
+    }
     
 }

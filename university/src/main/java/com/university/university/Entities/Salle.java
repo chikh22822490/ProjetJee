@@ -2,9 +2,9 @@ package com.university.university.Entities;
 
 import java.util.List;
 
-import javax.annotation.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -13,7 +13,7 @@ import javax.persistence.Table;
 @Table(name = "Salle")
 public class Salle {
 
-    @Id @GeneratedValue
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long codeS;
     private String nomS;
     private long capaciteS;
@@ -22,5 +22,21 @@ public class Salle {
     List<Seance> listSeances;
 
     public Salle(){}
+
+    public long getCapaciteS() {
+        return capaciteS;
+    }
+
+    public void setCapaciteS(long capaciteS) {
+        this.capaciteS = capaciteS;
+    }
+
+    public String getNomS() {
+        return nomS;
+    }
+
+    public void setNomS(String nomS) {
+        this.nomS = nomS;
+    }
     
 }

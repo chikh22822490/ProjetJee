@@ -44,7 +44,7 @@ public class UniversityController {
 
     @PutMapping("/updateUn/{/id}")
     public String updateUniversity(@PathVariable(value = "id") String id, University un){
-        if(un==null)
+        if(un==null&&un.getAdresseU()==null&&un.getNomU()==null)
             return "Impossible de faire la mise a jour";
         else{
             unS.updateUniversity(un);
