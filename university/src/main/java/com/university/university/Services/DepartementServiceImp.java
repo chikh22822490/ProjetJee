@@ -16,8 +16,9 @@ public class DepartementServiceImp implements DepartementService{
     DepartementRepository dtR;
 
     @Override
-    public void saveDepartement(Departement dt) {
+    public Departement saveDepartement(Departement dt) {
         dtR.save(dt);
+        return(dt);
     }
 
     @Override

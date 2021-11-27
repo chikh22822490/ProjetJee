@@ -6,7 +6,7 @@ import com.university.university.Entities.University;
 
 public interface UniversityService {
     
-    void saveUniversity(University un);
+    University saveUniversity(University un);
     void updateUniversity(University un);
     List<University> listUniversity();
     void removeUniversity(long id);

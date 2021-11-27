@@ -1,6 +1,7 @@
 package com.university.university.Services;
 
 import java.util.List;
+import java.util.Optional;
 
 import com.university.university.Entities.University;
 import com.university.university.Interfaces.UniversityService;
@@ -15,8 +16,9 @@ public class UniversityServiceImp implements UniversityService{
     @Autowired
     UniversityRepository unR;
     @Override
-    public void saveUniversity(University un) {
+    public University saveUniversity(University un) {
         unR.save(un);
+        return(un);
     }
 
     @Override

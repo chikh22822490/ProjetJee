@@ -6,7 +6,7 @@ import com.university.university.Entities.Cours;
 
 public interface CoursService {
     
-    void saveCours(Cours cr);
+    Cours saveCours(Cours cr);
     void updateCours(Cours cr);
     List<Cours> listCours();
     void removeCours(long id);

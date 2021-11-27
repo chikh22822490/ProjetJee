@@ -16,8 +16,9 @@ public class CoursServiceImp implements CoursService{
     CoursRepository crR;
     
     @Override
-    public void saveCours(Cours cr) {
-        crR.save(cr);    
+    public Cours saveCours(Cours cr) {
+        crR.save(cr);   
+        return (cr); 
     }
 
     @Override

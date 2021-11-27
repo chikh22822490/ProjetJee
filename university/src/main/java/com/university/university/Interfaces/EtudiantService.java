@@ -6,7 +6,7 @@ import com.university.university.Entities.Etudiant;
 
 public interface EtudiantService {
     
-    void saveEtudiant(Etudiant et);
+    Etudiant saveEtudiant(Etudiant et);
     void updateEtudiant(Etudiant et);
     List<Etudiant> listEtudiants();
     void removeEtudiant(long id);

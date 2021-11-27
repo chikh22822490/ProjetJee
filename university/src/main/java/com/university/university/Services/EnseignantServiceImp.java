@@ -16,8 +16,9 @@ public class EnseignantServiceImp implements EnseignantService{
     EnseignantRepository esR;
 
     @Override
-    public void saveEnseignant(Enseignant es) {
+    public Enseignant saveEnseignant(Enseignant es) {
         esR.save(es);
+        return(es);
     }
 
     @Override

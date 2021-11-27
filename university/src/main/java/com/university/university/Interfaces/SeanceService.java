@@ -6,7 +6,7 @@ import com.university.university.Entities.Seance;
 
 public interface SeanceService {
     
-    void saveSeance(Seance sea);
+    Seance saveSeance(Seance sea);
     void updateSeance(Seance sea);
     List<Seance> listSeance();
     void removeSeance(long id);

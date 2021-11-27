@@ -19,9 +19,25 @@ public class University {
     private String adresseU;
 
     @ManyToMany(mappedBy = "university")
-    List<Departement> departements;
+    private List<Departement> departements;
 
     public University(){}
+
+    public long getCodeU() {
+        return codeU;
+    }
+
+    public void setCodeU(long codeU) {
+        this.codeU = codeU;
+    }
+
+    public List<Departement> getDepartements() {
+        return departements;
+    }
+
+    public void setDepartements(List<Departement> departements) {
+        this.departements = departements;
+    }
 
     public String getAdresseU() {
         return adresseU;

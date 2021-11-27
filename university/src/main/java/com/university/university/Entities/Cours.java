@@ -18,10 +18,18 @@ public class Cours {
     private String libelleC;
 
     @OneToMany(mappedBy = "coursSea")
-    List<Seance> listSeances;
+    private List<Seance> listSeances;
 
     public String getLibelleC() {
         return libelleC;
+    }
+
+    public List<Seance> getListSeances() {
+        return listSeances;
+    }
+
+    public void setListSeances(List<Seance> listSeances) {
+        this.listSeances = listSeances;
     }
 
     public void setLibelleC(String libelleC) {

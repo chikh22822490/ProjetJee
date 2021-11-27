@@ -6,7 +6,7 @@ import com.university.university.Entities.Enseignant;
 
 public interface EnseignantService {
     
-    void saveEnseignant(Enseignant es);
+    Enseignant saveEnseignant(Enseignant es);
     void updateEnseignant(Enseignant es);
     List<Enseignant> listEnseignant();
     void removeEnseignant(long id);

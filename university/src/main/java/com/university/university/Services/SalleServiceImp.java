@@ -16,8 +16,9 @@ public class SalleServiceImp implements SalleService{
     SalleRepository saR;
 
     @Override
-    public void saveSalle(Salle sa) {
+    public Salle saveSalle(Salle sa) {
         saR.save(sa);
+        return(sa);
     }
 
     @Override

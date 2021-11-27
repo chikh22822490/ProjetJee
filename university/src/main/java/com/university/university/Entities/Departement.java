@@ -2,7 +2,9 @@ package com.university.university.Entities;
 
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,7 +24,7 @@ public class Departement {
     @ManyToMany
     List<University> university;
 
-    @OneToMany(mappedBy =  "departementEns")
+    @OneToMany(mappedBy =  "departementEns", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Enseignant> enseignants;
 
     public Departement(){}

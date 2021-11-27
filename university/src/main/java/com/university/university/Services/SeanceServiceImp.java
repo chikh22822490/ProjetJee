@@ -16,8 +16,9 @@ public class SeanceServiceImp implements SeanceService{
     SeanceRepository seaR;
 
     @Override
-    public void saveSeance(Seance sea) {
-        seaR.save(sea);    
+    public Seance saveSeance(Seance sea) {
+        seaR.save(sea);   
+        return(sea); 
     }
 
     @Override

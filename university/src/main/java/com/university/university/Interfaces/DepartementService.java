@@ -6,7 +6,7 @@ import com.university.university.Entities.Departement;
 
 public interface DepartementService {
     
-    void saveDepartement(Departement dt);
+    Departement saveDepartement(Departement dt);
     void updateDepartement(Departement dt);
     List<Departement> listDepartement();
     void removeDepartement(long id);

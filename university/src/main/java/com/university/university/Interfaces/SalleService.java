@@ -6,7 +6,7 @@ import com.university.university.Entities.Salle;
 
 public interface SalleService {
     
-    void saveSalle(Salle sa);
+    Salle saveSalle(Salle sa);
     void updateSalle(Salle sa);
     List<Salle> listSalle();
     void removeSalle(long id);
