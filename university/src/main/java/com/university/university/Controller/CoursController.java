@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.university.university.Entities.Cours;
 import com.university.university.Interfaces.CoursService;
-import com.university.university.Repositories.CoursRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
