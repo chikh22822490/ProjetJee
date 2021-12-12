@@ -9,6 +9,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 @RepositoryRestResource
 public interface UniversityRepository extends JpaRepository <University,Long>{
     
-    @Query(value = "select u from University u where codeC = ?1")
+    @Query(value = "select u from University u where codeU = ?1")
     University findByIdUniversity(long id);
 }

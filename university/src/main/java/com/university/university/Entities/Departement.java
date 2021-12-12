@@ -12,6 +12,8 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 @Entity
 @Table(name = "Departement")
@@ -28,6 +30,11 @@ public class Departement {
     private List<Enseignant> enseignants;
 
     public Departement(){}
+
+    public Departement(long code, String nom){
+        this.codeD=code;
+        this.nomD=nom;
+    }
 
     public String getNomD() {
         return nomD;

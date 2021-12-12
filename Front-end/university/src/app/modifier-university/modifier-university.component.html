@@ -1,0 +1,37 @@
+<div class="wrapper">
+  <div class="row justify-content-center">
+      <div class="col-lg-6 d-flex justify-content-center">
+          <div class="card" style="width:2000rem">
+              <div class="card-body text-center">
+                  <h1>Modifier une université</h1>
+                  <div class="container">
+                      <form (submit)="modifierUniv()" [formGroup]="updateForm">
+                          <div class="col-s-6">
+                            <div class="form-group mb-3">
+                                <div>
+                                  <input type="text" formControlName="nomU" class="form-control text-center"/>
+                                </div>
+                            </div>
+                            <div class="form-group mb-3">
+                              <div>
+                                <input type="text" formControlName="adresseU" class="form-control text-center"/>
+                              </div>
+                          </div>
+                          <div class="form-group mb-3">
+                            <div>
+                              <input type="text" formControlName="image" class="form-control text-center"/>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="text-center">
+                          <button type="submit" class="btn btn-primary btn-lg my-3">
+                            Modifier
+                          </button>
+                        </div>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>

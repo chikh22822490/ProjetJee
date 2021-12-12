@@ -17,11 +17,20 @@ public class University {
     private long codeU;
     private String nomU;
     private String adresseU;
+    private String image;
 
     @ManyToMany(mappedBy = "university")
     private List<Departement> departements;
 
     public University(){}
+
+    public University(String nom,String adresse, String image, List<Departement> depats){
+        this.nomU=nom;
+        this.adresseU=adresse;
+        this.image=image;
+        this.departements=depats;
+    }
+
 
     public long getCodeU() {
         return codeU;
@@ -55,4 +64,21 @@ public class University {
         this.nomU = nomU;
     }
     
+
+    /**
+     * @return String return the image
+     */
+    public String getImage() {
+        return image;
+    }
+
+    /**
+     * @param image the image to set
+     */
+    public void setImage(String image) {
+        this.image = image;
+    }
+
+
+
 }
